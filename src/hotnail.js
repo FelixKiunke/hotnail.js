@@ -317,7 +317,7 @@ var hotnail = {
 				for (i2 = 0, len2 = str.length - 1; i2 < len2; i2++) {
 					str2 = str.slice(0, i2) + str[i2 + 1] + str[i2] + str.slice(i2 + 2);
 
-					dist = this.distance(str2, list[i]);
+					dist = Math.max(this.distance(str2, list[i]) + (2 / str.length));
 
 					if (str2 == list[i])
 						return str2;

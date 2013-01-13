@@ -1,0 +1,20 @@
+{
+	"us": {
+		"name": "US",
+		"domains": ["hotmail.com", "live.com", "gmx.com", "mac.com", "gmail.com", "me.com", "yahoo.com", "googlemail.com", "outlook.com", "live.com", "mail.com", "aol.com", "zoho.com", "comcast.net", "facebook.com"],
+		"tlds": ["com", "net", "edu", "co.uk", "me", "im", "info", "org", "name"],
+		"addresses": ["info", "mail", "contact", "email", "hello", "postmaster", "webmaster", "home", "support"]
+	},
+	"uk": {
+		"name": "UK",
+		"domains": ["hotmail.com", "live.com", "gmail.com", "me.com", "aol.com", "mac.com", "live.com", "yahoo.com", "comcast.net", "googlemail.com", "msn.com", "hotmail.co.uk", "yahoo.co.uk", "facebook.com", "gmx.com", "mail.com"],
+		"tlds": ["com", "net", "edu", "co.uk", "me.uk", "me", "im", "info", "org", "name"],
+		"addresses": ["info", "mail", "contact", "email", "hello", "postmaster", "webmaster", "home", "support"]
+	},
+	"de": {
+		"name": "Germany",
+		"domains": ["yahoo.de", "gmx.de", "gmx.net", "web.de", "1und1.de", "t-online.de", "arcor.de", "freenet.de", "hotmail.com", "hotmail.de", "live.com", "live.de", "gmail.com", "gmail.de", "me.com", "aol.de", "googlemail.com", "msn.com", "msn.de", "facebook.de"],
+		"tlds": ["com", "net", "de", "info", "org", "name", "eu"],
+		"addresses": ["info", "hallo", "kontakt", "mail", "email", "hello", "postmaster", "webmaster", "home", "support"]
+	}
+}
