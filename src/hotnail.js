@@ -9,7 +9,7 @@
  * domains, a great idea I took a little further ;)
 */
 /**
- * hotnail.js (hotnailjs.com) by Felix Kiunke. Version 0.1.0, released under MIT
+ * hotnail.js (hotnailjs.com) by Felix Kiunke. Version 0.1.1, released under MIT
  */
 
 var hotnail = {
@@ -180,12 +180,12 @@ var hotnail = {
 
 		// Okay, there didn't seem to be a matching domain so let's at least attempt to correct
 		// the TLD
-		if (this.tlds.indexOf(parts.tld) < 0) {
+		if (parts.tld === false || this.tlds.indexOf(parts.tld) < 0) {
 			// Account for misspellings like "gmxde" or "hotmailcom"
 			if (parts.tld === false || parts.domain.indexOf(".") < 0) {
 				// Try to match a TLD, assuming it is not mistyped
 				for (i = 4; i >= 2; i--) {
-					closestTld = this.tlds.indexOf(parts.tld.slice(-i));
+					closestTld = this.tlds.indexOf(parts.domain.slice(-i));
 					if (closestTld >= 0)
 						return correctedName + atSign + parts.domain.slice(0, -i) +
 							marker1 + "." + marker2 + this.tlds[closestTld];
@@ -282,7 +282,7 @@ var hotnail = {
 		} else
 			return false;
 
-		if (domain == "." || tld == "" || address == "")
+		if (domain == "." || tld === "" || address == "")
 			return false;
 
 		return {
