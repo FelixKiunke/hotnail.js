@@ -2,7 +2,7 @@ Locations
 =========
 The locations.json contains common email providers, top-level domains and address parts for some countries, which are used in the [download section](http://hotnailjs.com#download) of the website.
 
-The data is used for the corrections, and it is recommended that you use email providers, top-level domains and address parts most used in your country, so hotnail.js doesn't suggest e.g. gmx.de for US sites
+The data is used for the corrections, and it is recommended that you use email providers, top-level domains and address parts most used on your size or in your country, so hotnail.js doesn't suggest e.g. gmx.de for US sites
 
 The format is:
 ```
@@ -16,4 +16,4 @@ The format is:
 }
 ```
 
-**Your contributions are welcome! :)**
+*Your contributions are welcome!*

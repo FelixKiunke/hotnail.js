@@ -12,3 +12,5 @@ jürgn..könig@könig.we -> <strong>juergen</strong><strong>.</strong>k<strong>o
 lke..skywlke<span>@</span>gamil.co -> <strong>luke</strong><strong>.</strong><strong>skywalker</strong>@<strong>gmail.com</strong>
 
 **More examples on [the website](http://hotnailjs.com#examples)**
+
+*I would love you to contribute! :)*

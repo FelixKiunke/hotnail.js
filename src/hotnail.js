@@ -9,19 +9,16 @@
  * domains, a great idea I took a little further ;)
 */
 /**
- * hotnail.js (https://github.com/FelixKiunke/hotnail.js – http://hotnailjs.com)
- * By Felix Kiunke (GitHub: @FelixKiunke, Twitter: @kiunke)
- * v 0.1, released under MIT
+ * hotnail.js (hotnailjs.com) by Felix Kiunke. Version 0.1.0, released under MIT
  */
 
-// Comments of the form /*{}*/ are for the download builder at hotnailjs.com
 var hotnail = {
-	domains: [/*{domains}*/],             // Domains like gmail.com, hotmail.com etc.
-	tlds: [/*{tlds}*/],                   // TLDs like .de, .co.uk etc.
-	addresses: [/*{addresses}*/],         // Addresses like info@…, support, mail etc.
-	insertMarkers: false,                 // Insert markers before and after corrections,
-	                                      // so you can highlight them – see
-	                                      // http://hotnail.js.com/#docs:hotnail.insertMarkers
+	domains: [],          // Domains like gmail.com, hotmail.com etc.
+	tlds: [],             // TLDs like .de, .co.uk etc.
+	addresses: [],        // Addresses like info@…, support, mail etc.
+	insertMarkers: false, // Insert markers before and after corrections,
+	                      // so you can highlight them – see
+	                      // http://hotnail.js.com/#docs:hotnail.insertMarkers
 
 	// The actual correction function: takes an email address and optionally a name
 	// and returns a suggestion. If name is provided, attempts to correct the part
