@@ -9,7 +9,7 @@
  * domains, a great idea I took a little further ;)
 */
 /**
- * hotnail.js (hotnailjs.com) by Felix Kiunke. Version 0.1.1, released under MIT
+ * hotnail.js (hotnailjs.com) by Felix Kiunke. Version 0.1.2, released under MIT
  */
 
 var hotnail = {
@@ -51,7 +51,7 @@ var hotnail = {
 		// Split the name at spaces and other non-letters
 		if (name)
 			nameList = this.removeUmlauts(name.replace(/^\s+|\s+$/, "").replace(/\s+/, " "))
-				.replace(/[^A-Z]/i, " ").split(" ");
+				.replace(/[^A-Z]/i, " ").toLowerCase().split(" ");
 
 		// Replace the address part
 		if (name && nameList.length > 0) {
