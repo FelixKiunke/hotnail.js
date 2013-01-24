@@ -15,7 +15,7 @@
 var hotnail = {
 	domains: [],          // Domains like gmail.com, hotmail.com etc.
 	tlds: [],             // TLDs like .de, .co.uk etc.
-	addresses: [],        // Addresses like info@…, support, mail etc.
+	words: [],            // Address words like info@…, support, mail etc.
 	insertMarkers: false, // Insert markers before and after corrections,
 	                      // so you can highlight them – see
 	                      // http://hotnail.js.com/#docs:hotnail.insertMarkers
@@ -136,7 +136,7 @@ var hotnail = {
 				} else {
 					// Everything fine, no better suggestion OR no suggestion found
 					// Try with the predefined address parts like info, support, hello, etc.
-					sugg = self.findClosestItem(match, self.addresses, .3, true) || "";
+					sugg = self.findClosestItem(match, self.words, .3, true) || "";
 					sugg = sugg.toLowerCase() || false;
 					if (sugg && sugg != match)
 						return a + sugg + b;
@@ -152,7 +152,7 @@ var hotnail = {
 				var sugg;
 
 				match = self.removeUmlauts(match.toLowerCase());
-				sugg = self.findClosestItem(match, self.addresses, .3, true) || "";
+				sugg = self.findClosestItem(match, self.words, .3, true) || "";
 				sugg = sugg.toLowerCase() || false;
 				if (sugg && sugg != match)
 					return self.insertMarkers ? "\n" + sugg + "\r" : sugg;
