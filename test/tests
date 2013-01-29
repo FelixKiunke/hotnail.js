@@ -1,0 +1,59 @@
+# No domain, tld etc. data & no name provided, correct emails
+
+EXPECTED                      email                         name                domains[]                     tlds[]              words[]             insertMarkers
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+false                         john.doe@example.org          ""                  []                            []                  []                  false
+                              john.-doe@example.org
+                              john.doe@localhost
+                              j.doe@sub.email.example.org
+
+# Incomplete emails
+false                         john.doe@                     ""                  []                            []                  []                  false
+                              @example.org
+                              johnexample.org
+                              ""
+                              john.
+                              john..doe
+                              @
+
+# Formal errors & lower-casing
+john.doe@example.org          john.doe@@example..org        ""                  []                            []                  []                  false
+john-doe@example.org          .johN-doe@example.org-
+john@example.org              john..-.-+@@example.org
+john-doe@example.org          joHn--doe@EXamPle.OrG
+
+# Umlauts and invalid characters
+joehn.doeess@exaemple.oerg    jöhñ.döëß@éxämplè.örg         ""                  []                            []                  []                  false
+aeoeue@naiss                  ä#ö*ü@ÑÂÏ<ß
+false                         ,*<#§/$@example.org
+
+# Domain data provided
+
+EXPECTED                      email                         name                domains[]                     tlds[]              words[]             insertMarkers
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+john.doe@example.org          john.doe@example.or           ""                  example.org, gmail.com                            []                  []                  false
+                              john.doe@exampleorg
+                              john.doe@xample.org
+                              john.doe@xampleorg
+                              john.doe@xeample.org
+                              john.doe@xeampleorg
+                              john.doe@example.ogr
+                              john.doe@xeample.ogr
+                              john.doe@example.og
+                              john.doe@example.o
+false                         john.doe@example.info
+                              john.doe@example.com
+                              john.doe@example.de
+
+# Top-level domain data provided
+john.doe@example.org          john.doe@example.or           ""                  []                            org, com, info      []                  false
+john.doe@example.info         john.doe@example.njfo
+false                         john.doe@example.org                                                            org, ogr
+john.doe@example.org          john.doe@example.orge
+                              john.doe@example.or
+                              john.doe@exampleorg
+john.doe@example.ogr          john.doe@example.ogre
+john.doe@example.org          john.doe@example.ogre                                                           org
+false                         john.doe@example.org
+false                         john.doe@example.o
+john.doe@example.org          john.doe@exampleorg
